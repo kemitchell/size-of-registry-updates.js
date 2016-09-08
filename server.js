@@ -13,9 +13,10 @@ pump(
   }),
   writer.obj(function (chunk, _, done) {
     var sequence = chunk.seq
-    console.log(sequence)
+    var name = chunk.id || '(None)'
+    console.log('%s %s', name, sequence)
     var size = JSON.stringify(chunk).length
-    var line = '' + sequence + ' ' + size + '\n'
+    var line = '' + sequence + ' ' + name + ' ' + size + '\n'
     fs.appendFile(log, line, done)
   })
 )
