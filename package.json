@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "dependencies": {
+    "changes-stream": "^2.1.0",
+    "flush-write-stream": "^1.0.0",
+    "pump": "^1.0.1"
+  }
+}
